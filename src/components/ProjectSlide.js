@@ -78,7 +78,7 @@ export class ProjectSlide extends React.Component {
   render() {
     return (
       <Styled>
-        <div className="project">
+        <div ref={this.props.refProp} className="project">
           <div className="text-box">
             <div className="title">
               Top-Notch photos. Taken up a notch.

@@ -9,6 +9,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
+    this.projectsRef = React.createRef()
+    this.scrollTo = this.scrollTo.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
   
@@ -42,12 +44,19 @@ class App extends React.Component {
       }
     }
   }
+  
+  //Ref created and passed to the first ProjectSlide, which places it at its parent div.
+  //Reference invoked in the scrollTo method, which is passed as a prop to Splash, 
+  //which calls it when the SVG arrow is clicked
+  scrollTo() {
+    this.projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
 
   render() {
     return (
       <div className="App">
-        <Splash />
-        <ProjectSlide smallImage={kid} largeImage={rocks} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
+        <Splash scrollTo={this.scrollTo} />
+        <ProjectSlide refProp={this.projectsRef} smallImage={kid} largeImage={rocks} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
         <ProjectSlideReversed smallImage={kid} largeImage={rocks} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
         <ProjectSlide smallImage={kid} largeImage={rocks} animate1={this.state.popIn5} animate2={this.state.popIn6}/>
       </div>

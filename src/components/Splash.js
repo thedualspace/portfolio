@@ -46,20 +46,27 @@ p {
   animation: hintDown 2.5s infinite;
 }
 
+.arrow:hover {
+  cursor: pointer;
+}
+
+
 @keyframes hintDown {
   0%, 15%, 90%, 100% {
     transform: translateY(0);
     opacity: 0.5;
   }
+  45% 55% {
+    transform: scale(1);
+  }
   50% {
-    transform: translateY(20%);
+    transform: translateY(20%) scale(1.05);
     opacity: 1;
   }
 }
 `
 
 export class Splash extends React.Component {
-  
   render() {
     return(
       <Styled>
@@ -69,7 +76,7 @@ export class Splash extends React.Component {
             <p>WEB DEVELOPER</p>
           </div>
           <img className="mandel" src={mandel} />
-          <a href="#here" className="arrow" ></a>
+          <a onClick={this.props.scrollTo} className="arrow" ></a>
         </div>
       </Styled>
     )
