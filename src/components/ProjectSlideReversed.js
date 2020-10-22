@@ -12,18 +12,28 @@ const Styled = styled.div`
   text-align: center;
 }
 
-.small-image {
+.small-image-container {
+  overflow: hidden;
   max-width: 75%;
   grid-column: 2;
   grid-column-end: 2;
   grid-row: 2;
 }
+.small-image {
+  max-width: 100%;
+}
 
-.large-image {
+.large-image-container {
+  overflow: hidden;
+  margin: 0 0 auto 0;
   width: 100%;
   grid-column: 1;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+.large-image {
+  width: 100%;
 }
 
 .text-box {
@@ -45,13 +55,13 @@ const Styled = styled.div`
 }
 
 .animated {
-  animation: 1s inset;
+  animation: 3s inset;
 }
 
 @keyframes inset {
   0% {
+    transform: scale(1.4);
     clip-path: inset( 100% 0% 0% 0%);
-    transform: scale(1.1);
   }
 
   100% {
@@ -74,9 +84,13 @@ export class ProjectSlideReversed extends React.Component {
               HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
             </div>
           </div>
-
-          <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
-          <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+          <div className="large-image-container">
+            <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
+          </div>
+          <div className="small-image-container">
+            <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+          </div>
+          
         </div>
       </Styled>
     )
