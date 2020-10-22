@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import mandel from '../images/Mandelbrot.png';
+import mandel from '../images/Mandelbrot_wide.png';
 import arrowIcon from '../images/svg/icon-arrow-down.svg';
 
 const Styled = styled.div`
 .splash {
+  overflow: hidden;
   position: relative;
-  margin: auto;
   height: 100vh;
 }
 
 .text {
   position: absolute;
   top: 20%;
-  left: 18%;
+  left: 10%;
   color: white;
   letter-spacing: 0.15em;
 }
@@ -31,19 +31,18 @@ p {
 
 .mandel {
   display: block;
-  margin: auto;
   max-height: 100%;
 }
 
 .arrow {
   position: absolute;
   left: 50%;
-  bottom: 16px;
+  bottom: 20px;
   z-index: 10;
   height: 18px;
   width: 36px;
   background-image: url(${arrowIcon});
-  animation: hintDown 2.5s infinite;
+  animation: hintDown 2s infinite;
 }
 
 .arrow:hover {

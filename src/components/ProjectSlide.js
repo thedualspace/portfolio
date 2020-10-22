@@ -64,12 +64,12 @@ const Styled = styled.div`
 @keyframes inset {
   0% {
     transform: scale(1.1);
-    clip-path: inset( 100% 0% 0% 0%);
+    clip-path: inset( 100% 0% 0% 0% );
   }
 
   100% {
     transform: scale(1);
-    clip-path: inset( 0% 0% 0% 0%);
+    clip-path: inset( 0% 0% 0% 0% );
   }
 }
 `
@@ -94,8 +94,6 @@ export class ProjectSlide extends React.Component {
           <div className="small-image-container">
             <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
           </div>
-          
-          
         </div>
       </Styled>
     )
