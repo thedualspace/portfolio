@@ -13,9 +13,10 @@ const Styled = styled.div`
 .text {
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 18.5%;
   color: white;
   letter-spacing: 0.15em;
+  z-index: 10;
 }
 
 h1 {
@@ -29,8 +30,17 @@ p {
   font-size: 16px;
 }
 
+/* This positioning looks silly 
+but it is done to keep the 
+oversized background image centred 
+for any viewport size */
 .mandel {
-  display: block;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
   max-height: 100%;
 }
 
