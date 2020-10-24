@@ -8,11 +8,12 @@ const Styled = styled.div`
   overflow: hidden;
   position: relative;
   height: 100vh;
+  box-shadow: inset 0 -40px 50px 0px rgba(0,0,0,.5);
 }
 
 .text {
   position: absolute;
-  top: 20%;
+  top: 18%;
   left: 18.5%;
   color: white;
   letter-spacing: 0.15em;
@@ -42,6 +43,7 @@ for any viewport size */
   right: -9999px;
   margin: auto;
   max-height: 100%;
+  z-index: -10;
 }
 
 .arrow {
