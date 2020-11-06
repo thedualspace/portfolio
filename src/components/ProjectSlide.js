@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Badge from 'react-bootstrap/Badge';
 
 const Styled = styled.div`
 .project {
@@ -72,6 +73,10 @@ const Styled = styled.div`
     clip-path: inset( 0% 0% 0% 0% );
   }
 }
+
+.big-badge {
+  font-size: 16px;
+}
 `
 
 export class ProjectSlide extends React.Component {
@@ -81,7 +86,7 @@ export class ProjectSlide extends React.Component {
         <div ref={this.props.refProp} className="project">
           <div className="text-box">
             <div className="title">
-              Top-Notch photos. Taken up a notch.
+              SpaceX Hyperloop Pod Competition
             </div>
             <div className="statement">
               HDR+ makes your photos look even better by automatically adjusting the colour and lighting.

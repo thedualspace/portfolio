@@ -60,7 +60,7 @@ export class NavBar extends React.Component {
               ANDREW.
             </div>
             <div className="navbar-links">
-              <a>Projects</a>
+              <a onClick={this.props.scrollTo} >Projects</a>
               <a>Teams</a>
               <a>Contact</a>
             </div>

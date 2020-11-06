@@ -78,7 +78,7 @@ export class ProjectSlideReversed extends React.Component {
         <div className="project">
           <div className="text-box">
             <div className="title">
-              Top-Notch photos. Taken up a notch.
+              Formula Student
             </div>
             <div className="statement">
               HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
