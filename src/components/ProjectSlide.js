@@ -89,7 +89,7 @@ export class ProjectSlide extends React.Component {
               SpaceX Hyperloop Pod Competition
             </div>
             <div className="statement">
-              HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
+              The man the musk the legend
             </div>
           </div>
 

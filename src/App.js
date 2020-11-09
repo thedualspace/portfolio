@@ -1,6 +1,8 @@
 import React from 'react';
 import kid from './images/funnyKid.webp';
 import rocks from './images/rockArch.webp';
+import hyperloopLarge from './images/HyperloopLarge.png';
+import hyperloopSmall from './images/HyperloopSmall.png';
 import WebLearn from './components/WebLearn';
 import Mandelbrot from './components/Mandelbrot';
 import Jammming from './components/Jammming';
@@ -32,7 +34,7 @@ class App extends React.Component {
   
   handleScroll() {
     //Used to hide navbar at top of page
-    //Default is hidden, to avoid pop in when the page first renders.
+    //Constructor default is 'hidden', to avoid pop in when the page first renders.
     if ( window.scrollY > 0 ) {
       this.setState({
         navBarDisplayStatus: ''
@@ -80,9 +82,8 @@ class App extends React.Component {
         <Mandelbrot />
         <WebLearn />
         <Jammming />
-        <ProjectSlide refProp={this.projectsRef} smallImage={kid} largeImage={rocks} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
+        <ProjectSlide refProp={this.projectsRef} smallImage={hyperloopSmall} largeImage={hyperloopLarge} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
         <ProjectSlideReversed smallImage={kid} largeImage={rocks} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
-        <ProjectSlide smallImage={kid} largeImage={rocks} animate1={this.state.popIn5} animate2={this.state.popIn6}/>
       </div>
     );
   }

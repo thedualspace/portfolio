@@ -81,7 +81,7 @@ export class ProjectSlideReversed extends React.Component {
               Formula Student
             </div>
             <div className="statement">
-              HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
+              Race car go brrrr
             </div>
           </div>
           <div className="large-image-container">
