@@ -2,7 +2,6 @@ import React from 'react';
 import kid from './images/funnyKid.webp';
 import rocks from './images/rockArch.webp';
 import ProjectSlide from './components/ProjectSlide';
-import ProjectSlideReversed from './components/ProjectSlideReversed';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
 
@@ -72,7 +71,7 @@ class App extends React.Component {
         <NavBar displayStatus={this.state.navBarDisplayStatus} />
         <Splash scrollTo={this.scrollTo} />
         <ProjectSlide refProp={this.projectsRef} smallImage={kid} largeImage={rocks} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
-        <ProjectSlideReversed smallImage={kid} largeImage={rocks} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
+        <ProjectSlide reversed={1} smallImage={kid} largeImage={rocks} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
         <ProjectSlide smallImage={kid} largeImage={rocks} animate1={this.state.popIn5} animate2={this.state.popIn6}/>
       </div>
     );

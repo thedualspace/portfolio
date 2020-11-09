@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const Styled = styled.div`
 .project {
   display: grid;
-  margin: 75px auto 75px;
+  margin: ${({ reversed }) => reversed ? '100px auto 100px' : '75px auto 75px'};
   max-width: 960px;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: ${({ reversed }) => reversed ? '1.25fr 1fr' : '1fr 1.25fr'};
   grid-template-rows: repeat(2, 1fr);
   column-gap: 140px;
   text-align: center;
@@ -16,23 +16,23 @@ const Styled = styled.div`
   overflow: hidden;
   max-width: 75%;
   display: grid;
-  grid-column: 1;
+  grid-column: ${({ reversed }) => reversed ? '2' : '1'};
   grid-column-end: 2;
   grid-row: 2;
-  margin: 0 0 0 auto;
+  ${({ reversed }) => reversed ? '' : 'margin: 0 0 0 auto;'}
 }
 
 .small-image {
   max-width: 100%;
-  margin: 0 0 0 auto;
+  ${({ reversed }) => reversed ? '' : 'margin: 0 0 0 auto;'}
 }
 
 .large-image-container {
   overflow: hidden;
-  grid-column: 2;
+  grid-column: ${({ reversed }) => reversed ? '1' : '2'};
   grid-row-start: 1;
   grid-row-end: 3;
-  margin: 0 0 auto 0;
+  ${({ reversed }) => reversed ? 'margin: 0 0 0 auto;' : ''}
 }
 
 .large-image {
@@ -43,7 +43,7 @@ const Styled = styled.div`
   position: relative;
   margin: auto 0;
   text-align: left;
-  grid-column: 1;
+  grid-column: ${({ reversed }) => reversed ? '2' : '1'};
   grid-row: 1;
 }
 
@@ -77,7 +77,7 @@ const Styled = styled.div`
 export class ProjectSlide extends React.Component {
   render() {
     return (
-      <Styled>
+      <Styled reversed={this.props.reversed}>
         <div ref={this.props.refProp} className="project">
           <div className="text-box">
             <div className="title">
@@ -90,7 +90,7 @@ export class ProjectSlide extends React.Component {
 
           <div className="large-image-container">
             <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
-          </div>       
+          </div>
           <div className="small-image-container">
             <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
           </div>
