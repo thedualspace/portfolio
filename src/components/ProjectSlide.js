@@ -77,25 +77,25 @@ const Styled = styled.div`
 export class ProjectSlide extends React.Component {
   render() {
     return (
-        <Styled reversed={this.props.reversed}>
-          <div ref={this.props.refProp} className="project">
-            <div className="text-box">
-              <div className="title">
-                Top-Notch photos. Taken up a notch.
-              </div>
-              <div className="statement">
-                HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
-              </div>
+      <Styled reversed={this.props.reversed}>
+        <div ref={this.props.refProp} className="project">
+          <div className="text-box">
+            <div className="title">
+              Top-Notch photos. Taken up a notch.
             </div>
-
-            <div className="large-image-container">
-              <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
-            </div>
-            <div className="small-image-container">
-              <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+            <div className="statement">
+              HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
             </div>
           </div>
-        </Styled>
+
+          <div className="large-image-container">
+            <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
+          </div>
+          <div className="small-image-container">
+            <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+          </div>
+        </div>
+      </Styled>
     )
   }
 }
