@@ -64,13 +64,13 @@ const Styled = styled.div`
 
 @keyframes inset {
   0% {
-    transform: scale(1.1);
     clip-path: inset( 100% 0% 0% 0% );
+    transform: scale(1.1);
   }
 
   100% {
-    transform: scale(1);
     clip-path: inset( 0% 0% 0% 0% );
+    transform: scale(1);
   }
 }
 

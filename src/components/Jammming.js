@@ -75,8 +75,8 @@ export class WebLearn extends React.Component {
               <p>Authorization performed using OAuth, utilises Spotify's Web API.</p> 
             </div>
             <div className="links">
-              <Button variant="light" href="http://google.ie/" target="_blank">Live</Button> 
-              <Button variant="light">Code</Button> 
+              <a href="https://jammming-app.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Button variant="light">Live</Button></a> 
+              <a href="https://github.com/thedualspace/jammming" target ="_blank" rel="noopener noreferrer"><Button variant="light">Code</Button></a> 
             </div>
           </div>
           <div className="image-container">

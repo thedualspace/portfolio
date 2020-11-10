@@ -75,8 +75,8 @@ export class WebLearn extends React.Component {
               <p>Modular codebase specifically designed for easy expansion of subjects and customisable courses.</p> 
             </div>
             <div className="links">
-              <Button variant="light">Live</Button> 
-              <Button variant="light">Code</Button> 
+              <a href="https://weblearn-app.herokuapp.com/login" target="_blank" rel="noopener noreferrer"><Button variant="light">Live</Button></a> 
+              <a href="https://github.com/thedualspace/WebLearn" target="_blank" rel="noopener noreferrer"><Button variant="light">Code</Button></a> 
             </div>
           </div>
         </div>
