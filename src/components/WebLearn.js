@@ -55,7 +55,7 @@ export class WebLearn extends React.Component {
       <Styled>
         <div className="project">
           <div className="image-container">
-            <img src={laptop} alt="WebLearn Interface"></img>
+          <a href="https://weblearn-app.herokuapp.com/login" target="_blank" rel="noopener noreferrer"><img src={laptop} alt="WebLearn Interface"></img></a>
           </div>
           <div className="text-box">
             <div className="title">

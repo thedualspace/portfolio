@@ -1,8 +1,8 @@
 import React from 'react';
-import kid from './images/funnyKid.webp';
-import rocks from './images/rockArch.webp';
 import hyperloopLarge from './images/HyperloopLarge.png';
 import hyperloopSmall from './images/HyperloopSmall.png';
+import FSLarge from './images/FSLarge.png';
+import FSSmall from './images/FSSmall.png';
 import WebLearn from './components/WebLearn';
 import Mandelbrot from './components/Mandelbrot';
 import Jammming from './components/Jammming';
@@ -83,7 +83,7 @@ class App extends React.Component {
         <WebLearn />
         <Jammming />
         <ProjectSlide refProp={this.projectsRef} smallImage={hyperloopSmall} largeImage={hyperloopLarge} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
-        <ProjectSlideReversed smallImage={kid} largeImage={rocks} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
+        <ProjectSlideReversed smallImage={FSSmall} largeImage={FSLarge} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
       </div>
     );
   }

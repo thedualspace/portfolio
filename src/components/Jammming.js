@@ -80,7 +80,7 @@ export class WebLearn extends React.Component {
             </div>
           </div>
           <div className="image-container">
-            <img src={laptop} alt="Jammming Interface" ></img>
+            <a href="https://jammming-app.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src={laptop} alt="Jammming Interface" ></img></a>
           </div>
         </div>
       </Styled>
