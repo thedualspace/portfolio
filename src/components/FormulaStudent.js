@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import FSLarge from '../images/Achievements/FSLarge.png';
+import FSSmall from '../images/Achievements/FSSmall.png';
 
 const Styled = styled.div`
 .project {
@@ -21,6 +23,7 @@ const Styled = styled.div`
 }
 .small-image {
   max-width: 100%;
+  clip-path: inset( 100% 0% 0% 0% );
 }
 
 .large-image-container {
@@ -34,6 +37,7 @@ const Styled = styled.div`
 
 .large-image {
   width: 100%;
+  clip-path: inset( 100% 0% 0% 0% );
 }
 
 .text-box {
@@ -55,7 +59,7 @@ const Styled = styled.div`
 }
 
 .animated {
-  animation: 3s inset;
+  animation: 3s inset forwards;
 }
 
 @keyframes inset {
@@ -71,7 +75,7 @@ const Styled = styled.div`
 }
 `
 
-export class ProjectSlideReversed extends React.Component {
+export class FormulaStudent extends React.Component {
   render() {
     return (
       <Styled>
@@ -89,10 +93,10 @@ export class ProjectSlideReversed extends React.Component {
             </div>
           </div>
           <div className="large-image-container">
-            <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
+            <img src={FSLarge} className={`project-image large-image ` +this.props.animate1} alt="large" />
           </div>
           <div className="small-image-container">
-            <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+            <img src={FSSmall} className={`project-image small-image ` +this.props.animate2} alt="small" />
           </div>
           
         </div>
@@ -101,4 +105,4 @@ export class ProjectSlideReversed extends React.Component {
   }
 }
 
-export default ProjectSlideReversed;
+export default FormulaStudent;

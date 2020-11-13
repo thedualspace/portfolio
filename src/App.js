@@ -1,4 +1,5 @@
 import React from 'react';
+import Achievements from './components/Achievements';
 import hyperloopLarge from './images/Achievements/HyperloopLarge.png';
 import hyperloopSmall from './images/Achievements/HyperloopSmall.png';
 import FSLarge from './images/Achievements/FSLarge.png';
@@ -82,8 +83,7 @@ class App extends React.Component {
         <MandlebrotProject />
         <WebLearnProject />
         <JammingProject />
-        <ProjectSlide refProp={this.projectsRef} smallImage={hyperloopSmall} largeImage={hyperloopLarge} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
-        <ProjectSlideReversed smallImage={FSSmall} largeImage={FSLarge} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
+        <Achievements popIn1={this.state.popIn1} popIn2={this.state.popIn2} popIn3={this.state.popIn3} popIn4={this.state.popIn4}/>
       </div>
     );
   }
