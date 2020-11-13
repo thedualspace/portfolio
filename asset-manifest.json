@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.25b50464.chunk.css",
+    "main.js": "/portfolio/static/js/main.abf293a9.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.abf293a9.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
+    "static/css/2.2a86faee.chunk.css": "/portfolio/static/css/2.2a86faee.chunk.css",
+    "static/js/2.f4fa823e.chunk.js": "/portfolio/static/js/2.f4fa823e.chunk.js",
+    "static/js/2.f4fa823e.chunk.js.map": "/portfolio/static/js/2.f4fa823e.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.924b30298ac0173c9378ac503332355d.js": "/portfolio/precache-manifest.924b30298ac0173c9378ac503332355d.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/portfolio/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.25b50464.chunk.css.map": "/portfolio/static/css/main.25b50464.chunk.css.map",
+    "static/js/2.f4fa823e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.f4fa823e.chunk.js.LICENSE.txt",
+    "static/media/FSLarge.png": "/portfolio/static/media/FSLarge.a9b93ed7.png",
+    "static/media/FSSmall.png": "/portfolio/static/media/FSSmall.40c34b03.png",
+    "static/media/HyperloopLarge.png": "/portfolio/static/media/HyperloopLarge.235a9480.png",
+    "static/media/HyperloopSmall.png": "/portfolio/static/media/HyperloopSmall.55f8ef95.png",
+    "static/media/Jammming1.png": "/portfolio/static/media/Jammming1.adb28710.png",
+    "static/media/Jammming2.png": "/portfolio/static/media/Jammming2.af11aa67.png",
+    "static/media/Mandelbrot_wide.png": "/portfolio/static/media/Mandelbrot_wide.9ae93ee4.png",
+    "static/media/WebLearn1.png": "/portfolio/static/media/WebLearn1.20f88e2f.png",
+    "static/media/WebLearn2.png": "/portfolio/static/media/WebLearn2.5e00ace7.png",
+    "static/media/icon-arrow-down.svg": "/portfolio/static/media/icon-arrow-down.e06dd0c4.svg",
+    "static/media/mandelbrotBloodCell.png": "/portfolio/static/media/mandelbrotBloodCell.bc8377ae.png",
+    "static/media/mandelbrotIcicles.png": "/portfolio/static/media/mandelbrotIcicles.38223771.png",
+    "static/media/mandelbrotInferno.png": "/portfolio/static/media/mandelbrotInferno.b7d435f7.png",
+    "static/media/mandelbrotLightning.png": "/portfolio/static/media/mandelbrotLightning.4b52f411.png",
+    "static/media/mandelbrotNormal.png": "/portfolio/static/media/mandelbrotNormal.ce953658.png",
+    "static/media/mandelbrotOctopus.png": "/portfolio/static/media/mandelbrotOctopus.edd390f4.png",
+    "static/media/mandelbrotPsychadelic.png": "/portfolio/static/media/mandelbrotPsychadelic.a92d244e.png",
+    "static/media/mandelbrotSnowstorm.png": "/portfolio/static/media/mandelbrotSnowstorm.97cc16e2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.209c2d7e.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.f4fa823e.chunk.js",
+    "static/css/main.25b50464.chunk.css",
+    "static/js/main.abf293a9.chunk.js"
+  ]
+}
