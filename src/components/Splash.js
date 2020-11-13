@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import mandel from '../images/Mandelbrot_wide.png';
+import mandel from '../images/splash/Mandelbrot_wide.png';
 import arrowIcon from '../images/svg/icon-arrow-down.svg';
 
 const Styled = styled.div`

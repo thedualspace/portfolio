@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import laptop from '../images/tempLaptop.png';
+import Carousel from 'react-bootstrap/Carousel';
+import jammming1 from '../images/projects/Jammming1.png';
+import jammming2 from '../images/projects/Jammming2.png';
 
 const Styled = styled.div`
 .project {
@@ -51,6 +53,12 @@ img {
 .links {
   text-align: center;
 }
+
+.carousel-fade .carousel-item {
+  transition-timing-function: linear;
+  transition-duration: 0.4s;
+  transition-delay: 0s;
+}
 `
 
 export class WebLearn extends React.Component {
@@ -80,7 +88,14 @@ export class WebLearn extends React.Component {
             </div>
           </div>
           <div className="image-container">
-            <a href="https://jammming-app.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src={laptop} alt="Jammming Interface" ></img></a>
+            <Carousel indicators={false} controls={false} fade={true} keyboard={false}>
+              <Carousel.Item>
+                <a href="https://jammming-app.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src={jammming1} alt="Jammming Login" /></a>
+              </Carousel.Item>
+              <Carousel.Item>
+              <a href="https://jammming-app.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src={jammming2} alt="Jammming Interface" /></a>
+              </Carousel.Item>
+            </Carousel>
           </div>
         </div>
       </Styled>

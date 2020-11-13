@@ -2,7 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import fractal from '../images/fractal.png';
+import Carousel from 'react-bootstrap/Carousel';
+import bloodCell from '../images/projects/mandelbrotBloodCell.png';
+import icicles from '../images/projects/mandelbrotIcicles.png';
+import inferno from '../images/projects/mandelbrotInferno.png';
+import lightning from '../images/projects/mandelbrotLightning.png';
+import normal from '../images/projects/mandelbrotNormal.png';
+import octopus from '../images/projects/mandelbrotOctopus.png';
+import psychadelic from '../images/projects/mandelbrotPsychadelic.png';
+import snowstorm from '../images/projects/mandelbrotSnowstorm.png';
 
 
 const Styled = styled.div`
@@ -14,6 +22,10 @@ const Styled = styled.div`
 
 img {
   max-width: 100%;
+}
+
+image-container {
+  boreder: none;
 }
 
 .text-box {
@@ -47,6 +59,12 @@ img {
 .links {
   text-align: center;
 }
+
+.carousel-fade .carousel-item {
+  transition-timing-function: linear;
+  transition-duration: 0.4s;
+  transition-delay: 0s;
+}
 `
 
 export class Mandelbrot extends React.Component {
@@ -62,7 +80,32 @@ export class Mandelbrot extends React.Component {
             <Badge className="big-badge" variant="warning">CUDA</Badge>
           </div>
           <div className="image-container">
-            <img src={fractal} alt="WebLearn Interface"></img>
+            <Carousel indicators={false} controls={false} fade={true} keyboard={false}>
+              <Carousel.Item>
+                <img src={inferno} alt="Mandelbrot inferno" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={octopus} alt="Mandelbrot octopus" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={psychadelic} alt="Mandelbrot psychadelic" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={normal} alt="Mandelbrot normal map" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={bloodCell} alt="Mandelbrot blood cell" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={icicles} alt="Mandelbrot icicles" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={snowstorm} alt="Mandelbrot snowstorm" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={lightning} alt="Mandelbrot lightning" />
+              </Carousel.Item>
+            </Carousel>
           </div>
           <div className="text-box">
             <div className="description">
@@ -73,8 +116,8 @@ export class Mandelbrot extends React.Component {
               <p>The curiosity-led project which stoked my interest in digital visualisation and coding at a professional level.</p> 
             </div>
             <div className="links">
-              <Button variant="light">Live</Button> 
-              <Button variant="light">Code</Button> 
+              <a href="https://www.youtube.com/playlist?list=PLJsrSpdT9jKOawbrIZByNnJZqIVfpCigs" target="_blank"><Button variant="light">Media</Button></a> 
+              <a href="https://github.com/thedualspace/mandelbrot" target="_blank"><Button variant="light">Code</Button></a> 
             </div>
           </div>
         </div>

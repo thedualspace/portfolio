@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import laptop from '../images/tempLaptop.png';
+import Carousel from 'react-bootstrap/Carousel';
+import WebLearn1 from '../images/projects/WebLearn1.png';
+import WebLearn2 from '../images/projects/WebLearn2.png';
 
 const Styled = styled.div`
 .project {
@@ -47,6 +49,12 @@ img {
 .links {
   text-align: center;
 }
+
+.carousel-fade .carousel-item {
+  transition-timing-function: linear;
+  transition-duration: 0.4s;
+  transition-delay: 0s;
+}
 `
 
 export class WebLearn extends React.Component {
@@ -55,7 +63,15 @@ export class WebLearn extends React.Component {
       <Styled>
         <div className="project">
           <div className="image-container">
-          <a href="https://weblearn-app.herokuapp.com/login" target="_blank" rel="noopener noreferrer"><img src={laptop} alt="WebLearn Interface"></img></a>
+            <Carousel indicators={false} controls={false} fade={true} keyboard={false}>
+              <Carousel.Item>
+                <a href="https://weblearn-app.herokuapp.com/login" target="_blank" rel="noopener noreferrer"><img src={WebLearn1} alt="Jammming Login" /></a>
+              </Carousel.Item>
+              <Carousel.Item>
+                <a href="https://weblearn-app.herokuapp.com/login" target="_blank" rel="noopener noreferrer"><img src={WebLearn2} alt="Jammming Interface" /></a>
+              </Carousel.Item>
+            </Carousel>
+          
           </div>
           <div className="text-box">
             <div className="title">
