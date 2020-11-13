@@ -1,13 +1,6 @@
 import React from 'react';
-import hyperloopLarge from './images/Achievements/HyperloopLarge.png';
-import hyperloopSmall from './images/Achievements/HyperloopSmall.png';
-import FSLarge from './images/Achievements/FSLarge.png';
-import FSSmall from './images/Achievements/FSSmall.png';
-import WebLearn from './components/WebLearn';
-import Mandelbrot from './components/Mandelbrot';
-import Jammming from './components/Jammming';
-import ProjectSlide from './components/ProjectSlide';
-import ProjectSlideReversed from './components/ProjectSlideReversed';
+import Projects from './components/Projects';
+import Achievements from './components/Achievements';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -78,12 +71,8 @@ class App extends React.Component {
       <div className="App">
         <NavBar scrollTo={this.scrollTo} displayStatus={this.state.navBarDisplayStatus} />
         <Splash scrollTo={this.scrollTo} />
-        <WebLearn />
-        <Mandelbrot />
-        <WebLearn />
-        <Jammming />
-        <ProjectSlide refProp={this.projectsRef} smallImage={hyperloopSmall} largeImage={hyperloopLarge} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
-        <ProjectSlideReversed smallImage={FSSmall} largeImage={FSLarge} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
+        <Projects refProp={this.projectsRef} />
+        <Achievements popIn1={this.state.popIn1} popIn2={this.state.popIn2} popIn3={this.state.popIn3} popIn4={this.state.popIn4}/>
       </div>
     );
   }

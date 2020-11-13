@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Badge from 'react-bootstrap/Badge';
+import hyperloopLarge from '../images/Achievements/HyperloopLarge.png';
+import hyperloopSmall from '../images/Achievements/HyperloopSmall.png';
 
 const Styled = styled.div`
 .project {
@@ -79,11 +80,11 @@ const Styled = styled.div`
 }
 `
 
-export class ProjectSlide extends React.Component {
+export class Hyperloop extends React.Component {
   render() {
     return (
       <Styled>
-        <div ref={this.props.refProp} className="project">
+        <div className="project">
           <div className="text-box">
             <div className="title">
               SpaceX Hyperloop Pod Competition
@@ -98,10 +99,10 @@ export class ProjectSlide extends React.Component {
           </div>
 
           <div className="large-image-container">
-            <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
+            <img src={hyperloopLarge} className={`project-image large-image ` + this.props.animate1} alt="large" />
           </div>       
           <div className="small-image-container">
-            <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+            <img src={hyperloopSmall} className={`project-image small-image ` + this.props.animate2} alt="small" />
           </div>
         </div>
       </Styled>
@@ -109,4 +110,4 @@ export class ProjectSlide extends React.Component {
   }
 }
 
-export default ProjectSlide;
+export default Hyperloop;
