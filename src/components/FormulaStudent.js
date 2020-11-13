@@ -23,6 +23,7 @@ const Styled = styled.div`
 }
 .small-image {
   max-width: 100%;
+  clip-path: inset( 100% 0% 0% 0% );
 }
 
 .large-image-container {
@@ -36,6 +37,7 @@ const Styled = styled.div`
 
 .large-image {
   width: 100%;
+  clip-path: inset( 100% 0% 0% 0% );
 }
 
 .text-box {
@@ -57,7 +59,7 @@ const Styled = styled.div`
 }
 
 .animated {
-  animation: 3s inset;
+  animation: 3s inset forwards;
 }
 
 @keyframes inset {
