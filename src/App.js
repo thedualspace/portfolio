@@ -1,8 +1,10 @@
 import React from 'react';
-import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
+import JammingProject from "./components/CodingProject/Jamming/JammingProject";
+import WebLearnProject from "./components/CodingProject/WebLearn/WebLearnProject";
+import MandlebrotProject from "./components/CodingProject/Mandelbrot/MandlebrotProject";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
@@ -71,7 +73,10 @@ class App extends React.Component {
       <div className="App">
         <NavBar scrollTo={this.scrollTo} displayStatus={this.state.navBarDisplayStatus} />
         <Splash scrollTo={this.scrollTo} />
-        <Projects refProp={this.projectsRef} />
+        <WebLearnProject />
+        <MandlebrotProject />
+        <WebLearnProject />
+        <JammingProject />
         <Achievements popIn1={this.state.popIn1} popIn2={this.state.popIn2} popIn3={this.state.popIn3} popIn4={this.state.popIn4}/>
       </div>
     );
