@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import mandel from '../images/Mandelbrot_wide.png';
+import mandel from '../images/splash/Mandelbrot_wide.png';
 import arrowIcon from '../images/svg/icon-arrow-down.svg';
 
 const Styled = styled.div`
@@ -22,13 +22,15 @@ const Styled = styled.div`
 
 h1 {
   margin: 0;
-  font-weight: normal;
-  font-size: 40px;
+  font-weight: BOLD;
+  font-size: 36px;
 }
 
 p {
   margin: 0;
   font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.34em;
 }
 
 /* This positioning looks silly 
@@ -83,7 +85,7 @@ export class Splash extends React.Component {
       <Styled>
         <div className="splash">
           <div className="text">
-            <h1>Andrew Boland</h1>
+            <h1>ANDREW.</h1>
             <p>WEB DEVELOPER</p>
           </div>
           <img className="mandel" src={mandel} />

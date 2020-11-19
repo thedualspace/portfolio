@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import hyperloopLarge from '../images/Achievements/HyperloopLarge.png';
+import hyperloopSmall from '../images/Achievements/HyperloopSmall.png';
 
 const Styled = styled.div`
 .project {
@@ -24,7 +26,8 @@ const Styled = styled.div`
 
 .small-image {
   max-width: 100%;
-  ${({ reversed }) => reversed ? '' : 'margin: 0 0 0 auto;'}
+  margin: 0 0 0 auto;
+  clip-path: inset( 100% 0% 0% 0% );
 }
 
 .large-image-container {
@@ -37,6 +40,7 @@ const Styled = styled.div`
 
 .large-image {
   width: 100%;
+  clip-path: inset( 100% 0% 0% 0% );
 }
 
 .text-box {
@@ -58,41 +62,59 @@ const Styled = styled.div`
 }
 
 .animated {
-  animation: 3s inset;
+  animation: 3s inset forwards;
 }
 
 @keyframes inset {
   0% {
-    transform: scale(1.1);
     clip-path: inset( 100% 0% 0% 0% );
+    transform: scale(1.1);
   }
 
   100% {
-    transform: scale(1);
     clip-path: inset( 0% 0% 0% 0% );
+    transform: scale(1);
   }
+}
+
+.big-badge {
+  font-size: 16px;
 }
 `
 
-export class ProjectSlide extends React.Component {
+export class Hyperloop extends React.Component {
   render() {
     return (
+<<<<<<< HEAD:src/components/ProjectSlide.js
       <Styled reversed={this.props.reversed}>
         <div ref={this.props.refProp} className="project">
+=======
+      <Styled>
+        <div className="project">
+>>>>>>> new-projects-format:src/components/Hyperloop.js
           <div className="text-box">
             <div className="title">
-              Top-Notch photos. Taken up a notch.
+              SpaceX Hyperloop Pod Competition
             </div>
             <div className="statement">
-              HDR+ makes your photos look even better by automatically adjusting the colour and lighting.
+              <p>Éirloop was Ireland's first submission to the annual <a href="https://youtu.be/VYStvnepo40" target="_blank" rel="noopener noreferrer">SpaceX Hyperloop Pod Competition</a>.</p>
+              
+              <p>One of only 20 teams from over 1000 invited to finals at SpaceX HQ in California. One of only 3 teams to receive an Innovators Award.</p> 
+            
+              <p>I was primarily responsible for building mathematical models of pod behavior during rapid acceleration and high velocity phases.</p>
             </div>
           </div>
 
           <div className="large-image-container">
+<<<<<<< HEAD:src/components/ProjectSlide.js
             <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
           </div>
+=======
+            <img src={hyperloopLarge} className={`project-image large-image ` + this.props.animate1} alt="large" />
+          </div>       
+>>>>>>> new-projects-format:src/components/Hyperloop.js
           <div className="small-image-container">
-            <img src={this.props.smallImage} className={`project-image small-image ` +this.props.animate2} alt="small" />
+            <img src={hyperloopSmall} className={`project-image small-image ` + this.props.animate2} alt="small" />
           </div>
         </div>
       </Styled>
@@ -100,4 +122,4 @@ export class ProjectSlide extends React.Component {
   }
 }
 
-export default ProjectSlide;
+export default Hyperloop;

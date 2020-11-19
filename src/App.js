@@ -1,9 +1,9 @@
 import React from 'react';
-import kid from './images/funnyKid.webp';
-import rocks from './images/rockArch.webp';
-import ProjectSlide from './components/ProjectSlide';
+import Projects from './components/Projects';
+import Achievements from './components/Achievements';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +27,7 @@ class App extends React.Component {
   
   handleScroll() {
     //Used to hide navbar at top of page
+    //Constructor default is 'hidden', to avoid pop in when the page first renders.
     if ( window.scrollY > 0 ) {
       this.setState({
         navBarDisplayStatus: ''
@@ -68,11 +69,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar displayStatus={this.state.navBarDisplayStatus} />
+        <NavBar scrollTo={this.scrollTo} displayStatus={this.state.navBarDisplayStatus} />
         <Splash scrollTo={this.scrollTo} />
-        <ProjectSlide refProp={this.projectsRef} smallImage={kid} largeImage={rocks} animate1={this.state.popIn1} animate2={this.state.popIn2}/>
-        <ProjectSlide reversed={1} smallImage={kid} largeImage={rocks} animate1={this.state.popIn3} animate2={this.state.popIn4}/>
-        <ProjectSlide smallImage={kid} largeImage={rocks} animate1={this.state.popIn5} animate2={this.state.popIn6}/>
+        <Projects refProp={this.projectsRef} />
+        <Achievements popIn1={this.state.popIn1} popIn2={this.state.popIn2} popIn3={this.state.popIn3} popIn4={this.state.popIn4}/>
       </div>
     );
   }
