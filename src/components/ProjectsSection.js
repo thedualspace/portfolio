@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import WebLearn from './WebLearn';
-import Mandelbrot from './Mandelbrot';
-import Jammming from './Jammming';
+import JammingProject from "./CodingProject/Jamming/JammingProject";
+import WebLearnProject from "./CodingProject/WebLearn/WebLearnProject";
+import MandelbrotProject from "./CodingProject/Mandelbrot/MandlebrotProject";
+
 
 const Styled = styled.div`
 .projects-title {
@@ -18,7 +19,7 @@ p {
 }
 `
 
-export class Projects extends React.Component {
+export class ProjectsSection extends React.Component {
   render() {
     return(
       <Styled ref={this.props.refProp} >
@@ -27,13 +28,13 @@ export class Projects extends React.Component {
           <p>Some things I've worked on.</p>
         </div>
         <div className="project-list">
-          <WebLearn />
-          <Mandelbrot />
-          <WebLearn />
+          <WebLearnProject />
+          <MandelbrotProject />
+          <JammingProject />
         </div>
       </Styled>
     )
   }
 }
 
-export default Projects
+export default ProjectsSection

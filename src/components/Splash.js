@@ -89,7 +89,7 @@ export class Splash extends React.Component {
             <p>WEB DEVELOPER</p>
           </div>
           <img className="mandel" src={mandel} />
-          <a onClick={this.props.scrollTo} className="arrow" ></a>
+          <a onClick={this.props.scrollToProjects} className="arrow" ></a>
         </div>
       </Styled>
     )
