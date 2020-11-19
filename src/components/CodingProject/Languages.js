@@ -2,7 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Badge from 'react-bootstrap/Badge';
 
-const variantColours = ['primary', 'warning', 'danger', 'info'];
+const variantColours = {
+    'React': 'primary',
+    'JavaScript': 'warning', 
+    'Node.js': 'success', 
+    'MySQL': 'info',
+    'Python3': 'success',
+    'CUDA': 'warning',
+    'HTML & CSS': 'danger'
+};
 
 /**
  * This component takes in an array of strings and turns them into badges
@@ -14,7 +22,7 @@ const Languages = ({ languages = [], direction }) => {
     return (
         <LanguagesContainer direction={direction}>
             {languages.map((language, i) =>
-                <StyledBadge key={`${language}${i}`} className="big-badge" variant={variantColours[i] || variantColours[i - variantColours.length]}>{language}</StyledBadge>
+                <StyledBadge key={`${language}${i}`} className="big-badge" variant={variantColours[language]}>{language}</StyledBadge>
             )}
         </LanguagesContainer>
     )
