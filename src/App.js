@@ -1,11 +1,10 @@
 import React from 'react';
-import Achievements from './components/Achievements';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
-import ProjectsSection from './components/ProjectsSection'
-import JammingProject from "./components/CodingProject/Jamming/JammingProject";
-import WebLearnProject from "./components/CodingProject/WebLearn/WebLearnProject";
-import MandlebrotProject from "./components/CodingProject/Mandelbrot/MandlebrotProject";
+import Footer from './components/Footer';
+import ProjectsSection from './components/ProjectsSection';
+import AchievementsSection from './components/AchievementsSection';
+import Contact from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
@@ -16,8 +15,11 @@ class App extends React.Component {
     }
     this.projectsRef = React.createRef();
     this.achievementsRef = React.createRef();
+    this.contactRef = React.createRef();
+
     this.scrollToProjects = this.scrollToProjects.bind(this);
     this.scrollToAchievements = this.scrollToAchievements.bind(this);
+    this.scrollToContact = this.scrollToContact.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
   
@@ -75,23 +77,36 @@ class App extends React.Component {
     this.achievementsRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
+  scrollToContact() {
+    this.contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
   render() {
     return (
       <div className="App">
         <NavBar 
           scrollToProjects={this.scrollToProjects} 
           scrollToAchievements={this.scrollToAchievements}
+          scrollToContact={this.scrollToContact}
           displayStatus={this.state.navBarDisplayStatus} 
         />
-        <Splash scrollToProjects={this.scrollToProjects} />
-        <ProjectsSection refProp={this.projectsRef} />
-        <Achievements 
+        <Splash 
+          scrollToProjects={this.scrollToProjects} 
+        />
+        <ProjectsSection 
+          refProp={this.projectsRef} 
+        />
+        <AchievementsSection 
           refProp={this.achievementsRef}
           popIn1={this.state.popIn1} 
           popIn2={this.state.popIn2} 
           popIn3={this.state.popIn3} 
           popIn4={this.state.popIn4}
         />
+        <Contact 
+          refProp={this.contactRef} 
+        />
+        <Footer />
       </div>
     );
   }

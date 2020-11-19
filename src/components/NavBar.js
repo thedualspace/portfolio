@@ -62,7 +62,7 @@ export class NavBar extends React.Component {
             <div className="navbar-links">
               <a onClick={this.props.scrollToProjects} >Projects</a>
               <a onClick={this.props.scrollToAchievements} >Teams</a>
-              <a>Contact</a>
+              <a onClick={this.props.scrollToContact} >Contact</a>
             </div>
           </div>
           
