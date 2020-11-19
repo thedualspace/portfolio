@@ -6,77 +6,66 @@ import hyperloopSmall from '../images/Achievements/HyperloopSmall.png';
 const Styled = styled.div`
 .project {
   display: grid;
-  margin: ${({ reversed }) => reversed ? '100px auto 100px' : '75px auto 75px'};
+  margin: 75px auto 75px;
   max-width: 960px;
-  grid-template-columns: ${({ reversed }) => reversed ? '1.25fr 1fr' : '1fr 1.25fr'};
+  grid-template-columns: 1fr 1.25fr;
   grid-template-rows: repeat(2, 1fr);
   column-gap: 140px;
   text-align: center;
 }
-
 .small-image-container {
   overflow: hidden;
   max-width: 75%;
   display: grid;
-  grid-column: ${({ reversed }) => reversed ? '2' : '1'};
+  grid-column: 1;
   grid-column-end: 2;
   grid-row: 2;
-  ${({ reversed }) => reversed ? '' : 'margin: 0 0 0 auto;'}
+  margin: 0 0 0 auto;
 }
-
 .small-image {
   max-width: 100%;
   margin: 0 0 0 auto;
   clip-path: inset( 100% 0% 0% 0% );
 }
-
 .large-image-container {
   overflow: hidden;
-  grid-column: ${({ reversed }) => reversed ? '1' : '2'};
+  grid-column: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-  ${({ reversed }) => reversed ? 'margin: 0 0 0 auto;' : ''}
+  margin: 0 0 auto 0;
 }
-
 .large-image {
   width: 100%;
   clip-path: inset( 100% 0% 0% 0% );
 }
-
 .text-box {
   position: relative;
   margin: auto 0;
   text-align: left;
-  grid-column: ${({ reversed }) => reversed ? '2' : '1'};
+  grid-column: 1;
   grid-row: 1;
 }
-
 .title {
   font-size: 32px;
   font-weight: 600;
 }
-
 .statement {
   margin-top: 20px;
   font-size: 16px;
 }
-
 .animated {
   animation: 3s inset forwards;
 }
-
 @keyframes inset {
   0% {
     clip-path: inset( 100% 0% 0% 0% );
     transform: scale(1.1);
   }
-
   100% {
     clip-path: inset( 0% 0% 0% 0% );
     transform: scale(1);
   }
 }
-
 .big-badge {
   font-size: 16px;
 }
@@ -85,13 +74,8 @@ const Styled = styled.div`
 export class Hyperloop extends React.Component {
   render() {
     return (
-<<<<<<< HEAD:src/components/ProjectSlide.js
-      <Styled reversed={this.props.reversed}>
-        <div ref={this.props.refProp} className="project">
-=======
       <Styled>
         <div className="project">
->>>>>>> new-projects-format:src/components/Hyperloop.js
           <div className="text-box">
             <div className="title">
               SpaceX Hyperloop Pod Competition
@@ -106,13 +90,8 @@ export class Hyperloop extends React.Component {
           </div>
 
           <div className="large-image-container">
-<<<<<<< HEAD:src/components/ProjectSlide.js
-            <img src={this.props.largeImage} className={`project-image large-image ` +this.props.animate1} alt="large" />
-          </div>
-=======
             <img src={hyperloopLarge} className={`project-image large-image ` + this.props.animate1} alt="large" />
           </div>       
->>>>>>> new-projects-format:src/components/Hyperloop.js
           <div className="small-image-container">
             <img src={hyperloopSmall} className={`project-image small-image ` + this.props.animate2} alt="small" />
           </div>
