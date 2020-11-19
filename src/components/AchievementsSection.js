@@ -17,7 +17,7 @@ p {
 }
 `
 
-export class Achievements extends React.Component {
+export class AchievementsSection extends React.Component {
   render() {
     return(
       <Styled ref={this.props.refProp} >
@@ -34,4 +34,4 @@ export class Achievements extends React.Component {
   }
 }
 
-export default Achievements
+export default AchievementsSection;

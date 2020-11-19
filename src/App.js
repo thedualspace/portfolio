@@ -1,8 +1,10 @@
 import React from 'react';
-import Projects from './components/Projects';
-import Achievements from './components/Achievements';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import ProjectsSection from './components/ProjectsSection';
+import AchievementsSection from './components/AchievementsSection';
+import Contact from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
@@ -11,8 +13,13 @@ class App extends React.Component {
     this.state = {
       navBarDisplayStatus: 'hidden'
     }
-    this.projectsRef = React.createRef()
-    this.scrollTo = this.scrollTo.bind(this);
+    this.projectsRef = React.createRef();
+    this.achievementsRef = React.createRef();
+    this.contactRef = React.createRef();
+
+    this.scrollToProjects = this.scrollToProjects.bind(this);
+    this.scrollToAchievements = this.scrollToAchievements.bind(this);
+    this.scrollToContact = this.scrollToContact.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
   
@@ -62,17 +69,44 @@ class App extends React.Component {
   //Ref created and passed to the first ProjectSlide, which places it at its parent div.
   //Reference invoked in the scrollTo method, which is passed as a prop to Splash, 
   //which calls it when the SVG arrow is clicked
-  scrollTo() {
+  scrollToProjects() {
     this.projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToAchievements() {
+    this.achievementsRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToContact() {
+    this.contactRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   render() {
     return (
       <div className="App">
-        <NavBar scrollTo={this.scrollTo} displayStatus={this.state.navBarDisplayStatus} />
-        <Splash scrollTo={this.scrollTo} />
-        <Projects refProp={this.projectsRef} />
-        <Achievements popIn1={this.state.popIn1} popIn2={this.state.popIn2} popIn3={this.state.popIn3} popIn4={this.state.popIn4}/>
+        <NavBar 
+          scrollToProjects={this.scrollToProjects} 
+          scrollToAchievements={this.scrollToAchievements}
+          scrollToContact={this.scrollToContact}
+          displayStatus={this.state.navBarDisplayStatus} 
+        />
+        <Splash 
+          scrollToProjects={this.scrollToProjects} 
+        />
+        <ProjectsSection 
+          refProp={this.projectsRef} 
+        />
+        <AchievementsSection 
+          refProp={this.achievementsRef}
+          popIn1={this.state.popIn1} 
+          popIn2={this.state.popIn2} 
+          popIn3={this.state.popIn3} 
+          popIn4={this.state.popIn4}
+        />
+        <Contact 
+          refProp={this.contactRef} 
+        />
+        <Footer />
       </div>
     );
   }
