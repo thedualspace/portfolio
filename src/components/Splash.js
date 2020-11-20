@@ -18,11 +18,20 @@ const Styled = styled.div`
   color: white;
   letter-spacing: 0.15em;
   z-index: 10;
+
+  @media (max-width: 960px) {
+    text-shadow: 2px 2px 4px black;
+    margin: auto ;
+  }
+}
+
+.overlay {
+  
 }
 
 h1 {
   margin: 0;
-  font-weight: BOLD;
+  font-weight: bold;
   font-size: 36px;
 }
 
@@ -84,9 +93,11 @@ export class Splash extends React.Component {
     return(
       <Styled>
         <div className="splash">
-          <div className="text">
-            <h1>ANDREW.</h1>
-            <p>WEB DEVELOPER</p>
+          <div className="overlay">
+            <div className="text">
+              <h1>ANDREW.</h1>
+              <p>WEB DEVELOPER</p>
+            </div>
           </div>
           <img className="mandel" src={mandel} />
           <a onClick={this.props.scrollToProjects} className="arrow" ></a>

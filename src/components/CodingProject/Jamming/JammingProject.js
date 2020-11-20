@@ -18,7 +18,7 @@ const JammingProject = () => {
                 {link: 'https://jammming-app.herokuapp.com/', src: jammingOne, alt: 'Jammming Login'},
                 {link: 'https://jammming-app.herokuapp.com/', src: jammingTwo, alt: 'Jammming Interface'}
             ]}
-            direction={'right'}
+            direction={'left'}
         />
     )
 }

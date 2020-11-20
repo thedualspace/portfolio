@@ -6,20 +6,19 @@ import styled from 'styled-components';
 
 const ContactContainer = styled.div`
 .contact {
-  margin: 60px 20px;
-  display: flex;
-  justify-content: center;
+  display: absolute;
+  margin: 80px auto;
+  text-align: center;
+  
 }
 
 .contact-button {
-  margin: auto 40px;
+  margin: auto;
 }
 
 .tagline {
-  margin: 10px 0 0 0;
   font-size: 40px;
   font-weight: 500;
-  justify-content: right;
 }
 `;
 

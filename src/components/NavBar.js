@@ -8,6 +8,7 @@ const Styled = styled.div`
   position: fixed;
   height: 56px;
   width: 100vw;
+  padding: 0;
   z-index: 100;
   background-color: white;
   opacity: 1;
@@ -41,12 +42,13 @@ const Styled = styled.div`
 a {
   border: 1px transparent;
   border-radius: 16px;
-  padding: 4px 6px;
-  margin: 10px;
+  padding: 4px 8px;
+  margin: 10px 5px;
 }
 
 a:hover, a:active {
   background-color: #F4F4F4;
+  cursor: pointer;
 }
 `
 
