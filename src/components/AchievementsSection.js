@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hyperloop from './Hyperloop';
+import Hyperloop from './Achievements/Hyperloop/Hyperloop';
 import FormulaStudent from './FormulaStudent';
 
 const Styled = styled.div`

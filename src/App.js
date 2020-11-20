@@ -6,6 +6,7 @@ import ProjectsSection from './components/ProjectsSection';
 import AchievementsSection from './components/AchievementsSection';
 import Contact from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HyperloopCentered from './components/Achievements/Hyperloop/HyperloopCentered';
 
 class App extends React.Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class App extends React.Component {
 
     //For every image, find the number of pixels away from bottom of viewport. 
     //If less than zero (image is in view or has been passed) change state of popIn[num] to 'animated'
-    //popIn[num] passed to stateless ProjectSlide components which they use to decide when to animate into view
+    //popIn[num] passed to stateless Achievement components which they use to decide when to animate into view
     for ( let i = 0 ; i < projectImages.length ; i++ ) {
       let distanceFromViewport = projectImages[i].getBoundingClientRect().top - window.innerHeight;
 
