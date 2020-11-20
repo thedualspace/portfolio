@@ -5,18 +5,18 @@ import hyperloopSmall from '../images/Achievements/HyperloopSmall.png';
 
 const Styled = styled.div`
 .project {
-  display: grid;
   margin: 75px auto 75px;
   max-width: 960px;
+  display: grid;
   grid-template-columns: 1fr 1.25fr;
   grid-template-rows: repeat(2, 1fr);
   column-gap: 140px;
   text-align: center;
 }
+
 .small-image-container {
   overflow: hidden;
   max-width: 75%;
-  display: grid;
   grid-column: 1;
   grid-column-end: 2;
   grid-row: 2;
