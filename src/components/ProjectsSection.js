@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import JammingProject from "./CodingProject/Jamming/JammingProject";
-import WebLearnProject from "./CodingProject/WebLearn/WebLearnProject";
-import MandelbrotProject from "./CodingProject/Mandelbrot/MandlebrotProject";
+import JammingProject from "./Projects/Jamming/JammingProject";
+import WebLearnProject from "./Projects/WebLearn/WebLearnProject";
+import MandelbrotProject from "./Projects/Mandelbrot/MandlebrotProject";
 
 
 const Styled = styled.div`

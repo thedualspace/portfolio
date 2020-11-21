@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hyperloop from './Achievements/Hyperloop/Hyperloop';
-import FormulaStudent from './FormulaStudent';
+import FormulaStudent from './Achievements/FormulaStudent/FormulaStudent';
 
 const Styled = styled.div`
 .achievements-title {

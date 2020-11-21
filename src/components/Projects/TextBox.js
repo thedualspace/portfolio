@@ -37,6 +37,7 @@ const DescriptionContainer = styled.div`
     margin-top: 8px;
     ${({ direction }) => (direction === 'center' ? 'max-width: 540px;' : '')}
     ${({ direction }) => (direction === 'center' ? 'margin: auto;' : '')}
+    ${({ direction }) => (direction === 'center' ? 'padding: 0 30px;' : '')};
     ${({ direction }) => (direction === 'center' ? 'margin-top: 1em;' : '')}
 `;
 

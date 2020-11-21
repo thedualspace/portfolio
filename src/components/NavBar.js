@@ -31,12 +31,21 @@ const Styled = styled.div`
   display: flex;
   margin: 10px;
   margin-left: 25px;
+
+  @media (max-width: 960px) {
+    margin: 12px;
+    font-size: 18px;
+  }
 }
 
 .navbar-links {
   display: flex;
   justify-content: flex-end;
   margin-right: 25px;
+
+  @media (max-width: 960px) {
+    margin-right: 12px;
+  }
 }
 
 a {
@@ -44,6 +53,12 @@ a {
   border-radius: 16px;
   padding: 4px 8px;
   margin: 10px 5px;
+  
+  @media (max-width: 960px) {
+    margin: 13px 2px;
+    padding: 2px 6px;
+    font-size: 14px;
+  }
 }
 
 a:hover, a:active {
@@ -63,7 +78,7 @@ export class NavBar extends React.Component {
             </div>
             <div className="navbar-links">
               <a onClick={this.props.scrollToProjects} >Projects</a>
-              <a onClick={this.props.scrollToAchievements} >Teams</a>
+              <a onClick={this.props.scrollToAchievements} >Achievements</a>
               <a onClick={this.props.scrollToContact} >Contact</a>
             </div>
           </div>
