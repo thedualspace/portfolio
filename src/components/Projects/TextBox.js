@@ -4,7 +4,7 @@ import Languages from "./Languages";
 import Button from "react-bootstrap/Button";
 import Carousel from "./Carousel";
 
-const TextBox = ({ languages, title, Description, direction, carouselItems = [] }) => {
+const TextBox = ({ languages, title, Description, direction, links, carouselItems = [] }) => {
     return (
         <TextBoxContainer direction={direction}>
             <Title direction={direction}>{title}</Title>
@@ -16,11 +16,11 @@ const TextBox = ({ languages, title, Description, direction, carouselItems = [] 
                 <Description />
             </DescriptionContainer>
             <Links>
-                <a href="https://jammming-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                    <StyledButton variant="light">Live</StyledButton>
+                <a href={links[0].link} target="_blank" rel="noopener noreferrer">
+                    <StyledButton variant="light">{links[0].text}</StyledButton>
                 </a>
-                <a href="https://github.com/thedualspace/jammming" target ="_blank" rel="noopener noreferrer">
-                    <StyledButton variant="light">Code</StyledButton>
+                <a href={links[1].link} target ="_blank" rel="noopener noreferrer">
+                    <StyledButton variant="light">{links[1].text}</StyledButton>
                 </a>
             </Links>
         </TextBoxContainer>

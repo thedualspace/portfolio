@@ -7,11 +7,11 @@ import TextBox from "./TextBox";
 Note that if the device window size is below 960px, *all* projects will be forced into a center direction.
 This style is suitable for mobile devices.
 */
-const Project = ({ languages, title, Description, direction = 'left', carouselItems }) => {
+const Project = ({ languages, title, Description, direction = 'left', links, carouselItems }) => {
     if (direction === 'center' || window.innerWidth < 960) {
         return (
             <ProjectContainer direction={'center'}>
-                <TextBox languages={languages} title={title} Description={Description} direction={'center'} carouselItems={carouselItems} />
+                <TextBox languages={languages} title={title} Description={Description} direction={'center'} links={links} carouselItems={carouselItems} />
             </ProjectContainer>
         )
     }
@@ -20,14 +20,14 @@ const Project = ({ languages, title, Description, direction = 'left', carouselIt
         return (
             <ProjectContainer direction={direction}>
                 <Carousel carouselItems={carouselItems} />
-                <TextBox languages={languages} title={title} Description={Description} direction={direction} />
+                <TextBox languages={languages} title={title} Description={Description} direction={direction} links={links} />
             </ProjectContainer>
         )
     }
 
     return(
         <ProjectContainer direction={direction}>
-            <TextBox languages={languages} title={title} Description={Description} direction={direction} />
+            <TextBox languages={languages} title={title} Description={Description} direction={direction} links={links} />
             <Carousel carouselItems={carouselItems} />
         </ProjectContainer>
     )
