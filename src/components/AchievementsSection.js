@@ -23,7 +23,7 @@ export class AchievementsSection extends React.Component {
       <Styled ref={this.props.refProp} >
         <div className="achievements-title">
           Achievements
-          <p>Team projects from my time in college</p>
+          <p>Team projects from my time in college.</p>
         </div>
         <div className="project-list">
           <Hyperloop animate1={this.props.popIn1} animate2={this.props.popIn2}/>

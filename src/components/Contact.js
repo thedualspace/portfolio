@@ -35,7 +35,7 @@ const Contact = (props) => {
           <p>Interested?</p>
         </div>
         <div className="contact-button">
-          <Button variant="dark" href="mailto:andrew.boland.2339@gmail.com">Contact Me</Button>
+          <Button variant="dark" href="">Contact Me</Button>
         </div>
        </div>
     </ContactContainer>
