@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="social">
           <SocialIcon url="https://www.linkedin.com/in/andrewboland95/" bgColor="#000" fgColor="#FFF" />
           <SocialIcon url="https://github.com/thedualspace" bgColor="#000" fgColor="#FFF" />
-          <SocialIcon url="mailto:andrew.boland.2339@gmail.com" bgColor="#000" fgColor="#FFF" />
+          <SocialIcon url="mailto:contact@andrewboland.dev" bgColor="#000" fgColor="#FFF" />
         </div>
         <div className="text">
           <br/>
