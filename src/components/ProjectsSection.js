@@ -24,7 +24,7 @@ export class ProjectsSection extends React.Component {
     return(
       <Styled ref={this.props.refProp} >
         <div className="projects-title">
-          Projects
+          Projects.
           <p>Some things I've worked on.</p>
         </div>
         <div className="project-list">

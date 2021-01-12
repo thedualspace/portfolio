@@ -22,7 +22,7 @@ export class AchievementsSection extends React.Component {
     return(
       <Styled ref={this.props.refProp} >
         <div className="achievements-title">
-          Achievements
+          Achievements.
           <p>Team projects from my time in college.</p>
         </div>
         <div className="project-list">

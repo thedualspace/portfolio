@@ -2,6 +2,7 @@ import React from 'react';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import About from './components/About';
 import ProjectsSection from './components/ProjectsSection';
 import AchievementsSection from './components/AchievementsSection';
 import Contact from './components/Contact';
@@ -94,6 +95,7 @@ class App extends React.Component {
         <Splash 
           scrollToProjects={this.scrollToProjects} 
         />
+        <About />
         <ProjectsSection 
           refProp={this.projectsRef} 
         />
