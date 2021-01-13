@@ -35,7 +35,7 @@ const Project = ({ languages, title, Description, direction = 'left', links, car
 
 const ProjectContainer = styled.div`
     ${({ direction }) => (direction === 'center' ? '' : 'display: grid;')};
-    margin: 75px auto 75px;
+    margin: 90px auto;
     max-width: 960px;
     ${({ direction }) => (direction === 'center' ? '' : `grid-template-columns: ${ direction === 'left' ? '1.25fr 0.75fr' : '0.75fr 1.25fr'};`)}
     ${({ direction }) => (direction === 'center' ? '' : 'column-gap: 40px;')}

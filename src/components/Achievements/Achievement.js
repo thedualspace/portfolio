@@ -22,7 +22,7 @@ const Achievement = ({ title, Description, largeImage, smallImage, direction, an
 
 const AchievementContainer = styled.div`
 {
-  margin: 75px auto 75px;
+  margin: 140px auto;
   max-width: 960px;
   ${({ direction }) => (direction === 'center' ? '' : 'display: grid;')}
   ${({ direction }) => (direction === 'center' ? '' : `grid-template-columns: ${ direction === 'left' ? '1fr 1.25fr' : '1.25fr 1fr'};`)}

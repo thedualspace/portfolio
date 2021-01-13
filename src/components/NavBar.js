@@ -26,7 +26,7 @@ const Styled = styled.div`
 }
 
 .navbar-title {
-  FONT-WEIGHT: bold;
+  font-weight: 700;
   font-size: 20px; 
   display: flex;
   margin: 10px;

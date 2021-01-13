@@ -8,7 +8,7 @@ const Styled = styled.div`
   padding-top: 60px;
   text-align: center;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 p {
